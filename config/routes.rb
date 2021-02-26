@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   end
 
   namespace :api do
-    get "/movie" => "movies#find_a_movie"
+    get "/movie" => "movies#movie_where"
   end
 end
