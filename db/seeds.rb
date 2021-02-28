@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 actor = Actor.new({ first_name: "Benedict", last_name: "Cumberbatch", know_for: "Sherlock" })
 actor.save
-mymovie = Movie.new({ title: "Coming to America", year: 1988, plot: "Pampered Prince goes to NY to find love" })
-mymovie = Movie.new({ title: "Big", year: 1986, plot: "40 year old man suddenly turns 12 years old" })
-mymovie = Movie.new({ title: "Step Brothers", year: 2002, plot: "40 year old losers become step brothers" })
+mymovie = Movie.create({ title: "Coming to America", year: 1988, plot: "Pampered Prince goes to NY to find love" })
+mymovie = Movie.create({ title: "Big", year: 1986, plot: "40 year old man suddenly turns 12 years old" })
+mymovie = Movie.create({ title: "Step Brothers", year: 2002, plot: "40 year old losers become step brothers" })
 mymovie.save

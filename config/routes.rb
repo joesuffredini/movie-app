@@ -13,5 +13,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     get "/movie" => "movies#movie_where"
+    get "/actorq" => "actors#get_actor_query"
+    get "/actorb/:first" => "actors#get_actor_block"
+    post "actorp" => "actors#get_actor_block"
   end
 end

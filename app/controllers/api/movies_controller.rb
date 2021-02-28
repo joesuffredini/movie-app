@@ -13,4 +13,5 @@ class Api::MoviesController < ApplicationController
     @movie = Movie.where("title = 'Step Brothers'")
     render "movie_where.json.jb"
   end
+
 end
