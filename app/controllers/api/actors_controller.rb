@@ -16,6 +16,8 @@ class Api::ActorsController < ApplicationController
       first_name: params[:first_name],
       last_name: params[:last_name],
       know_for: params[:know_for],
+      gender: params[:gender],
+      age: params[:age],
     )
     @actor.save
     render "show_actors.json.jb"
@@ -23,10 +25,12 @@ class Api::ActorsController < ApplicationController
 
   def update
     input = params[:id]
-    @actor = Product.find_by(id: input)
+    @actor = Actor.find_by(id: input)
     @actor.first_name = params[:first_name] || @actor.title
     @actor.last_name = params[:last_name] || @actor.year
-    @actor.know_for = params[:know_for] || @actor.plot
+    @actor.know_for = params[:know_for] || @actor.know_for
+    @actor.gender = params[:gender] || @actor.gender
+    @actor.age = params[:age] || @actor.age
     @actor.save
     render "show_actors.json.jb"
   end
