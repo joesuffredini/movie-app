@@ -11,14 +11,14 @@ class Api::MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(
+    @movie = Movie.new({
       id: params[:id],
       title: params[:title],
       year: params[:year],
       plot: params[:plot],
       director: params[:director],
       english: params[:english],
-    )
+     })
     @movie.save
     render "show_movies.json.jb"
   end
