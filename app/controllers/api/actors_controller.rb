@@ -11,16 +11,20 @@ class Api::ActorsController < ApplicationController
   end
 
   def create
-    @actor = Actor.new(
+    @actor = Actor.new({
       id: params[:id],
       first_name: params[:first_name],
       last_name: params[:last_name],
       know_for: params[:know_for],
       gender: params[:gender],
       age: params[:age],
-    )
-    @actor.save
-    render "show_actors.json.jb"
+      })
+    # Happy/sad path testing
+    if  @actor.save
+      render "show_actors.json.jb"
+    else 
+      render json: { errors: @actor.errors.full_messages }, status: 406
+    end
   end
 
   def update
