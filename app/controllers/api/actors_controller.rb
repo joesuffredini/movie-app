@@ -30,8 +30,8 @@ class Api::ActorsController < ApplicationController
   def update
     input = params[:id]
     @actor = Actor.find_by(id: input)
-    @actor.first_name = params[:first_name] || @actor.title
-    @actor.last_name = params[:last_name] || @actor.year
+    @actor.first_name = params[:first_name] || @actor.first_name
+    @actor.last_name = params[:last_name] || @actor.last_name
     @actor.know_for = params[:know_for] || @actor.know_for
     @actor.gender = params[:gender] || @actor.gender
     @actor.age = params[:age] || @actor.age
