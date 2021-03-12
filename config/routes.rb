@@ -21,6 +21,10 @@ Rails.application.routes.draw do
     post "/movie" => "movies#create"
     patch "/movie/:id" => "movies#update"
     delete "/movie/:id" => "movies#destroy"
-
   end
+
+  namespace :api do
+    post "/users" => "users#create"
+  end
+
 end

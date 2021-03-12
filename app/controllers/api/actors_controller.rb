@@ -47,4 +47,7 @@ class Api::ActorsController < ApplicationController
     actor.destroy
     render json: { message: "This item succesfully destroyed" }
   end
+
+  
+
 end
