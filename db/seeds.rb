@@ -13,9 +13,9 @@
 # actor = Actor.new({ first_name: "Bill", last_name: "Murray", know_for: "Stripes", gender: "Male", age: 70})
 # actor.save
 
-user = User.create!(name: "Joe Blow", email: "jb@example.com", password: "password")
+User.create!(name: "Joe Blow", email: "jb@example.com", password_digest: "$2a$12$S4d8IjqBJpUUcP4J/7eQTutqkP9srAGiX.d8dehGUtDSB8/z1VUwm", admin: false)
 
-mymovie = Movie.create({user_id: user.id, title: "Coming to America", year: 1988, plot: "Pampered Prince goes to NY to find love" })
-mymovie = Movie.create({user_id: user.id, title: "Big", year: 1986, plot: "40 year old man suddenly turns 12 years old" })
-mymovie = Movie.create({user_id: user.id, title: "Step Brothers", year: 2002, plot: "40 year old losers become step brothers" })
+mymovie = Movie.create({title: "Coming to America", year: 1988, plot: "Pampered Prince goes to NY to find love" })
+mymovie = Movie.create({title: "Big", year: 1986, plot: "40 year old man suddenly turns 12 years old" })
+mymovie = Movie.create({title: "Step Brothers", year: 2002, plot: "40 year old losers become step brothers" })
 mymovie.save
