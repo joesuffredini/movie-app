@@ -14,6 +14,7 @@
 # actor.save
 
 User.create!(name: "Heroku", email: "hero@example.com", password_digest: "$2a$12$S4d8IjqBJpUUcP4J/7eQTutqkP9srAGiX.d8dehGUtDSB8/z1VUwm", admin: false)
+User.create!(name: "Billy", email: "bb@example.com", password_digest: "$2a$12$9OIAMfsByL1UWJUECEE7tehtWOBF8h9XM.JY.YW.YaQ1YJpTsjwA2", admin: false)
 
 mymovie = Movie.create({title: "Coming to America", year: 1988, plot: "Pampered Prince goes to NY to find love" })
 mymovie = Movie.create({title: "Big", year: 1986, plot: "40 year old man suddenly turns 12 years old" })
