@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   namespace :api do
     post "/users" => "users#create"
     post "/movie_genre" => "movie_genres#create"
+    post "/sessions" => "sessions#create"
   end
 
 
